@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/styles/style.css" />
+		<title>Регистрация пользователя</title>
+	</head>
+	<body>
+		<form name="registerForm" class="form">
+			<span class="error none" id="usernameError"
+				>Имя должно содержать только буквы и пробелы, от 2 до 20
+				символов!</span
+			>
+			<label>
+				Ваше имя:
+				<input
+					type="text"
+					name="userName"
+					id="userName"
+					placeholder="Введите имя"
+					required
+			/></label>
+			<span class="error none" id="emailError"
+				>Введите корректную почту!</span
+			>
+			<label>
+				Почта:
+				<input
+					type="email"
+					name="email"
+					id="email"
+					placeholder="Введите почту"
+					required
+			/></label>
+			<span class="error none" id="ageError">Введите возраст!</span>
+			<label>
+				Возраст:
+				<input
+					type="number"
+					name="age"
+					id="age"
+					placeholder="Введите возраст"
+					required
+			/></label>
+			<span class="error none" id="genderError">Выберите пол!</span>
+			<label>
+				Пол:
+				<input
+					type="radio"
+					name="gender"
+					id="genderInput1"
+					value="male"
+				/>
+				<span class="gender-input" for="genderInput1">Мужской</span>
+				<input
+					type="radio"
+					name="gender"
+					id="genderInput2"
+					value="female"
+				/>
+				<span class="gender-input" for="genderInput2">Женский</span>
+			</label>
+			<span class="error none" id="professionError"
+				>Выберите профессию!</span
+			>
+			<label>
+				Профессия:
+				<select name="profession" id="profession" required>
+					<option selected disabled>Выберите профессию</option>
+					<option value="doctor">Врач</option>
+					<option value="coder">Программист</option>
+					<option value="teacher">Учитель</option>
+					<option value="designer">Дизайнер</option>
+					<option value="engineer">Инженер</option>
+					<option value="vendor">Продавец</option>
+					<option value="other">Другое</option>
+				</select></label
+			>
+			<span class="error none" id="passwordError"
+				>Пароль должен быть не менее 8 символов, содержать как минимум 1
+				заглавную букву, 1 строчную букву и 1 цифру!</span
+			>
+			<label>
+				Пароль:
+				<input
+					type="password"
+					name="password"
+					id="password"
+					placeholder="Введите пароль"
+					required
+					minlength="8"
+					pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
+					title="Пароль должен быть не менее 8 символов, содержать как минимум 1
+					заглавную букву, 1 строчную букву и 1 цифру"
+			/></label>
+			<span class="error none" id="termsError"
+				>Вы должны согласиться с условиями!</span
+			>
+			<label>
+				<input
+					type="checkbox"
+					name="agreeTerms"
+					id="agreeTerms"
+					required
+				/>Согласен на обработку данных</label
+			>
+			<button class="button" type="submit" disabled>Отправить</button>
+			<script src="./assets/scripts/script.js"></script>
+		</form>
+	</body>
+</html>
